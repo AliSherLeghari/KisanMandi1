@@ -73,7 +73,7 @@ class _CropDetailState extends State<CropDetail> {
           titlesData:FlTitlesData(topTitles:const AxisTitles(sideTitles:SideTitles(showTitles:false)),
             rightTitles:const AxisTitles(sideTitles:SideTitles(showTitles:false)),
             bottomTitles:AxisTitles(sideTitles:SideTitles(showTitles:true,reservedSize:30,interval:3,
-              getTitlesWidget:(value,meta){final n=value.toInt();return n>=0&&n<h.length?Text(h[n].date.substring(5),style:const TextStyle(fontSize:10)):const SizedBox.shrink();}))),
+              getTitlesWidget:(value,meta){final n=value.toInt();return n>=0&&n<h.length?Text(h[n].date.substring(5),style:const TextStyle(fontSize:10)):const SizedBox.shrink();})),
             leftTitles:const AxisTitles(sideTitles:SideTitles(showTitles:true,reservedSize:48))),
           lineBarsData:[LineChartBarData(spots:[for(var i=0;i<h.length;i++)FlSpot(i.toDouble(),h[i].price)],
             isCurved:true,barWidth:3,color:Colors.green,dotData:const FlDotData(show:false),belowBarData:BarAreaData(show:true,color:Colors.green.withValues(alpha:0.12)))],
